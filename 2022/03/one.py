@@ -19,7 +19,7 @@ def find_first_match(line):
             if(x == y):
                 return x
 
-def get_input():
+def main():
     filename = "input.txt"
     if(len(sys.argv) > 1):
         filename = sys.argv[1]
@@ -35,11 +35,4 @@ def get_input():
     print("Total value: %d" % sum_value)
 
     
-def main():
-    lines = get_input()
-    matching = find_first_match(lines)
-    print("Matching: %s" % matching)
-
-
-
 main()
