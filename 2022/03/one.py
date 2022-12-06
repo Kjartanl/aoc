@@ -13,13 +13,11 @@ def find_first_match(line):
     compartment_1 = line[:first_end]
     compartment_2 = line[first_end:]
     for x in compartment_1:
-        #print("Comp 1: %s" % x)
         for y in compartment_2:
-            #print("Comp 1: %s, 2; %s" % (x, y))
             if(x == y):
                 return x
 
-def get_input():
+def main():
     filename = "input.txt"
     if(len(sys.argv) > 1):
         filename = sys.argv[1]
@@ -35,11 +33,4 @@ def get_input():
     print("Total value: %d" % sum_value)
 
     
-def main():
-    lines = get_input()
-    matching = find_first_match(lines)
-    print("Matching: %s" % matching)
-
-
-
 main()
